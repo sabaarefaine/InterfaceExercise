@@ -47,10 +47,11 @@ namespace InterfaceExercise
 
             var suv = new SUV();
 
-            var vehicles = new List<IVehicle> { car, truck };
+            var vehicles = new List<IVehicle> { car, truck, suv };
 
             foreach (var vehicle in vehicles)
             {
+                vehicle.AboutCar();
                 vehicle.Drive();
                 vehicle.GearShift(true);
                 vehicle.Reverse();

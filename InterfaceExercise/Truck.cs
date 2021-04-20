@@ -18,8 +18,14 @@ namespace InterfaceExercise
 
         public bool HasAWD { get; set; } = true;
         public bool HasTruckBed { get; set; } = true;
-     
-       public void Drive()
+
+        public void AboutCar()
+        {
+            Console.WriteLine($"{Make} {Model} from the year {Year} with a total of {NumberOfSeats} seats! CEO {CEO} of {CompanyName} made sure these trucks were built Ford Tough.");
+
+        }
+
+        public void Drive()
         {
             if (HasAWD == true)
             {

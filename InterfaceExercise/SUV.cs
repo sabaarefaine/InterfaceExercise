@@ -1,7 +1,7 @@
 ﻿using System;
 namespace InterfaceExercise
 {
-    public class SUV
+    public class SUV : IVehicle, ICompany
     {
         public SUV()
         {
@@ -23,12 +23,25 @@ namespace InterfaceExercise
          * 
          */
 
+        public bool HasStickers { get; set; } = true;
+        public int NumberOfCarSeats { get; set; } = 3;
 
+        public void AboutCar()
+        {
+            Console.WriteLine($"{Make} {Model} from the year {Year} with a total of {NumberOfSeats} seats and an additional {NumberOfCarSeats} car seats for the tots!!");
 
+        }
 
         public void Drive()
         {
-            Console.WriteLine($"{GetType().Name} now driving forward. . .");
+            if (HasStickers == true)
+            {
+                Console.WriteLine($"SUV with stickers of course, {GetType().Name} now driving forward. . .");
+            }
+            else
+            {
+                Console.WriteLine($"{GetType().Name} now driving forward. . .");
+            }
         }
 
         public void Reverse()

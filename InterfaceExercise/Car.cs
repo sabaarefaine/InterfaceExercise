@@ -16,6 +16,12 @@ namespace InterfaceExercise
         public string CompanyName { get; set; } = "Toyota";
         public string CEO { get; set; } = "Akio Toyoda";
 
+        public void AboutCar()
+        {
+            Console.WriteLine($"{Make} {Model} from the year {Year} with a total of {NumberOfSeats} seats!");
+
+        }
+
         public void Drive()
         {
             Console.WriteLine($"{GetType().Name} now driving forward. . .");

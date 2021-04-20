@@ -9,6 +9,7 @@ namespace InterfaceExercise
         public int NumberOfSeats { get; set; }
         public bool GearsChanged { get; set; }
 
+        public void AboutCar();
         public void Drive();
         public void Reverse();
         public void Park();
